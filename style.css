@@ -931,7 +931,149 @@ img { max-width: 100%; display: block; }
 
 .lang-fill.animated { transform: scaleX(1); }
 
-/* ---------- CONTACT ---------- */
+/* Current job styles */
+.timeline-dot-current {
+  background: var(--red);
+  box-shadow: 0 0 0 4px var(--red-dim), 0 0 14px rgba(230,48,48,0.5);
+  animation: dotPulse 2s ease-in-out infinite;
+}
+@keyframes dotPulse {
+  0%,100% { box-shadow: 0 0 0 4px var(--red-dim), 0 0 14px rgba(230,48,48,0.4); }
+  50%      { box-shadow: 0 0 0 8px var(--red-dim), 0 0 24px rgba(230,48,48,0.6); }
+}
+
+.timeline-date-current { color: #fff; }
+
+.now-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--red);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-left: 8px;
+  vertical-align: middle;
+  animation: nowPulse 2s ease-in-out infinite;
+}
+@keyframes nowPulse {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0.65; }
+}
+
+.timeline-card-current {
+  border-color: rgba(230,48,48,0.35);
+  background: linear-gradient(135deg, #161616 0%, rgba(230,48,48,0.05) 100%);
+}
+
+/* ---------- RESEARCH & VOLUNTEERING ---------- */
+.research { background: var(--surface); }
+
+.rv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.rv-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.rv-card:hover { border-color: rgba(230,48,48,0.4); transform: translateY(-4px); }
+
+.rv-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.rv-icon { font-size: 32px; }
+
+.rv-badge {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.rv-badge-research {
+  background: rgba(99,102,241,0.12);
+  border: 1px solid rgba(99,102,241,0.3);
+  color: #a5b4fc;
+}
+
+.rv-badge-volunteer {
+  background: rgba(234,179,8,0.1);
+  border: 1px solid rgba(234,179,8,0.3);
+  color: #fcd34d;
+}
+
+.rv-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.rv-org {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.rv-project {
+  font-size: 13.5px;
+  color: var(--red);
+  margin-bottom: 16px;
+}
+.rv-project strong { font-weight: 600; }
+
+.rv-list {
+  list-style: none;
+  margin-bottom: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.rv-list li {
+  font-size: 13.5px;
+  color: var(--muted);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.rv-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-size: 10px;
+  top: 4px;
+}
+
+.rv-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.rv-tags span {
+  padding: 4px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .rv-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- RESEARCH & VOLUNTEERING ---------- */
 .contact { background: var(--surface); }
 
 .contact-grid {
