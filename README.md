@@ -2,7 +2,7 @@
 
 Personal portfolio website built with HTML, CSS, and vanilla JavaScript. Hosted free on GitHub Pages.
 
-**Live site:** `https://yourgithubusername.github.io/portfolio`
+**Live site:** `https://hadiChowdhury.github.io/portfolio`
 
 ---
 
